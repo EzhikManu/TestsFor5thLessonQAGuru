@@ -1,19 +1,26 @@
 package com.iljasstan;
 
+import com.github.javafaker.Faker;
+
+
+
 public class TestData {
+    public static Faker faker = new Faker();
     public static String
-            firstName = "Krot",
-            lastName = "Krotov",
-            userEmail = "krot@krotov.com",
-            userNumber = "1234567890",
+            firstName = faker.name().firstName(),
+            lastName = faker.name().lastName(),
+            userEmail = faker.internet().emailAddress(),
+            userNumber = faker.phoneNumber().subscriberNumber(10),
             dayofBirth = "07",
             monthofBirth = "November",
-            yearofBirth = "1992",
             subject1 = "Biology",
             subject2 = "Maths",
-            currentAddress = "Street, house, flat",
+            currentAddress = faker.address().streetAddress(),
             state = "Rajasthan",
             city = "Jaipur",
             resultTableTitle = "Thanks for submitting the form",
             resultGender = "Male";
+    public static int
+            yearofBirth = faker.number().numberBetween(1900, 2015);
+
 }

@@ -103,7 +103,7 @@ public class RegistrationPage {
     public void checkMobile(String value) {
         resultMobileField.parent().shouldHave(text(value));
     }
-    public void checkDateOfBirth(String day, String month, String year) {
+    public void checkDateOfBirth(String day, String month, int year) {
         resultDateOfBirthField.parent().shouldHave(text(day + " " + month + "," + year));
     }
     public void checkSubjects(String sub1, String sub2) {
@@ -116,7 +116,7 @@ public class RegistrationPage {
         resultPictureField.parent().shouldHave(text("sezan.jpg"));
     }
     public void checkAddress(String value) {
-        resultAddressField.parent().shouldHave(text("Street, house, flat"));
+        resultAddressField.parent().shouldHave(text(value));
     }
     public void checkStateAndCity(String value1, String value2) {
         resultStateAndCityField.parent().shouldHave(text(value1 + " " + value2));
