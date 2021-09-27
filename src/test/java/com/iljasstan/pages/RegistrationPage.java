@@ -43,83 +43,106 @@ public class RegistrationPage {
         open("https://demoqa.com/automation-practice-form");
         formTitle.shouldHave(text(FORM_TITLE));
     }
+
     public void setFirstName(String value) {
         firstNameInput.setValue(value);
     }
+
     public void setLastName(String value) {
         lastNameInput.setValue(value);
     }
+
     public void setUserEmail(String value) {
         userEmailInput.setValue(value);
     }
+
     public void setRadioGender() {
         radioGender.parent().click();
     }
+
     public void setUserNumber(String value) {
         userNumberInput.setValue(value);
     }
+
     public ComponentCalendar calendar = new ComponentCalendar();
 
     public void fillSubjects(String value) {
         subjectInput.setValue(value).pressEnter();
     }
+
     public void chooseSports() {
         radioSports.parent().click();
     }
+
     public void chooseReading() {
         radioReading.parent().click();
     }
+
     public void chooseMusic() {
         radioMusic.parent().click();
     }
+
     public void downloadPicture() {
         uploadPicture.uploadFromClasspath("sezan.jpg");
     }
+
     public void setCurrentAddress(String value) {
         submitButton.scrollTo();
         currentAddressInput.setValue(value);
     }
+
     public void setStateAndCity(String value1, String value2) {
         openState.click();
         chooseState.$(byText(value1)).click();
         openCity.click();
         chooseCity.$(byText(value2)).click();
     }
+
     public void submitForm() {
         submitButton.click();
     }
+
     public void checkTitle(String value) {
         tableTitle.shouldHave(text(value));
     }
+
     public void checkName(String value1, String value2) {
         resultNameField.parent().shouldHave(text(value1 + " " + value2));
     }
+
     public void checkEmail(String value) {
         resultEmailField.parent().shouldHave(text(value));
     }
+
     public void checkGender(String value) {
         resultGenderField.parent().shouldHave(text(value));
     }
+
     public void checkMobile(String value) {
         resultMobileField.parent().shouldHave(text(value));
     }
+
     public void checkDateOfBirth(String day, String month, int year) {
         resultDateOfBirthField.parent().shouldHave(text(day + " " + month + "," + year));
     }
+
     public void checkSubjects(String sub1, String sub2) {
         resultSubjectField.parent().shouldHave(text(sub1 + ", " + sub2));
     }
+
     public void checkHobbies() {
         resultHobbiesField.parent().shouldHave(text("Sports, Reading, Music"));
     }
+
     public void checkPicture() {
         resultPictureField.parent().shouldHave(text("sezan.jpg"));
     }
+
     public void checkAddress(String value) {
         resultAddressField.parent().shouldHave(text(value));
     }
+
     public void checkStateAndCity(String value1, String value2) {
         resultStateAndCityField.parent().shouldHave(text(value1 + " " + value2));
     }
-
 }
