@@ -3,7 +3,7 @@ package com.iljasstan;
 import com.github.javafaker.Faker;
 
 public class TestData {
-    public static Faker faker = new Faker();
+    private static final Faker faker = new Faker();
     public static String
             firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
@@ -18,7 +18,5 @@ public class TestData {
             city = "Jaipur",
             resultTableTitle = "Thanks for submitting the form",
             resultGender = "Male";
-    public static int
-            yearofBirth = faker.number().numberBetween(1900, 2015);
-
+    public static int yearofBirth = faker.number().numberBetween(1900, 2015);
 }

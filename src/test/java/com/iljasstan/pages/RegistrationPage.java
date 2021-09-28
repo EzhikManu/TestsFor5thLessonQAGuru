@@ -8,8 +8,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
+    public ComponentCalendar calendar = new ComponentCalendar();
+
     private final String FORM_TITLE = "Student Registration Form";
-    private SelenideElement
+    private final SelenideElement
             formTitle = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
@@ -63,8 +65,6 @@ public class RegistrationPage {
     public void setUserNumber(String value) {
         userNumberInput.setValue(value);
     }
-
-    public ComponentCalendar calendar = new ComponentCalendar();
 
     public void fillSubjects(String value) {
         subjectInput.setValue(value).pressEnter();
@@ -142,7 +142,7 @@ public class RegistrationPage {
         resultAddressField.parent().shouldHave(text(value));
     }
 
-    public void checkStateAndCity(String value1, String value2) {
-        resultStateAndCityField.parent().shouldHave(text(value1 + " " + value2));
+    public void checkStateAndCity(String state, String city) {
+        resultStateAndCityField.parent().shouldHave(text(state + " " + city));
     }
 }
