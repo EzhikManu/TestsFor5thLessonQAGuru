@@ -2,6 +2,7 @@ package com.iljasstan;
 
 import com.codeborne.selenide.Configuration;
 import com.iljasstan.pages.RegistrationPage;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.iljasstan.TestData.*;
@@ -10,6 +11,7 @@ public class PracticeFormWithPageObjectsTests {
     RegistrationPage page = new RegistrationPage();
 
     @Test
+    @DisplayName("Check the filling of the practice form with Page")
     void practiceFormTest() {
         Configuration.browser = "opera";
         Configuration.startMaximized = true;
