@@ -10,7 +10,7 @@ public class TestData {
             userEmail = faker.internet().emailAddress(),
             userNumber = faker.phoneNumber().subscriberNumber(10),
             dayofBirth = "07",
-            monthofBirth = "November",
+            monthofBirth = "October",
             subject1 = "Biology",
             subject2 = "Maths",
             currentAddress = faker.address().streetAddress(),

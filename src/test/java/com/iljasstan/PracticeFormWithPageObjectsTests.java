@@ -11,7 +11,7 @@ public class PracticeFormWithPageObjectsTests {
     RegistrationPage page = new RegistrationPage();
 
     @Test
-    @DisplayName("Check the filling of the practice form with Page")
+    @DisplayName("Check the filling of the practice form with PageObjects")
     void practiceFormTest() {
         Configuration.browser = "opera";
         Configuration.startMaximized = true;
