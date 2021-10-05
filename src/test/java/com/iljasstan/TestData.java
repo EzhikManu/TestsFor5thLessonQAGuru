@@ -17,6 +17,6 @@ public class TestData {
             state = "Rajasthan",
             city = "Jaipur",
             resultTableTitle = "Thanks for submitting the form",
-            resultGender = "Male";
+            resultGender = "Female";
     public static int yearofBirth = faker.number().numberBetween(1900, 2015);
 }
